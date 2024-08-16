@@ -9,9 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.7",
+    "@smastrom/react-rating": "^1.5.0",
+    "kill-port": "^2.0.1",
+    "next": "14.2.5",
     "react": "^18",
+    "react-bootstrap": "^2.10.4",
+    "react-bootstrap-star-rating": "^3.5.5-alpha.0.3",
     "react-dom": "^18",
-    "next": "14.2.5"
+    "react-hook-form": "^7.52.2",
+    "react-redux": "^9.1.2",
+    "redux": "^5.0.1"
   },
   "devDependencies": {
     "typescript": "^5",

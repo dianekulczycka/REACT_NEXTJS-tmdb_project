@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    /* NORMALIZATION */
+    margin: .1rem;
+    padding: .1rem;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    /* FONTS */
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* BODY LIGHT/DARK THEMES */
+
+.body-light {
+    margin: 0;
+    background: #e8e8e8;
+}
+
+.body-dark {
+    margin: 0;
+    background: #7c7c7c;
+}
+
+/* WIDTH */
+
+.w100perc {
+    width: 100%;
+}
+
+.w80perc {
+    width: 80%;
+}
+
+.w50vw {
+    width: 50vw;
+}
+
+/* MARGIN AUTO */
+
+.margin-auto {
+    margin: auto;
+}
+
+/* FLEXES */
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* GRIDS */
+
+.grid-2cols {
+    display: grid;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-template-columns: repeat(3, 30vw);
+}
+
+.grid-5cols {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(2, 5vh);
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.grid-gap-075em {
+    gap: .75em;
+}
+
+/* TEXT */
+
+h1, h2, h3, h4, h5, h6, p, a, button, span {
+    color: black;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+.text-centered {
+    text-align: center;
+}
+
+/* CUSTOM COLOR THEME */
+
+.border-darkred {
+    border: 1px darkred solid;
+}
+
+
+.link-hover-darkred:hover {
+    color: white;
+    background: darkred;
+    transition: 300ms ease-in-out;
+}
+
+.activeMenuLink {
+    color: darkred;
+}
+
+/* CUSTOM BADGE STYLING */
+
+.badges-container {
+    position: relative;
+}
+
+.badges {
+    position: absolute;
+    z-index: 999;
+    bottom: -10px;
+    left: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.badge {
+    padding: 10px;
+    opacity: .9;
+    background: red;
+    color: white;
+    border-radius: 10%;
+}
