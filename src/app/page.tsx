@@ -1,13 +1,28 @@
 import HeaderComponent from "@/app/components/HeaderComponent/HeaderComponent";
 import GenresComponent from "@/app/components/GenresComponent/GenresComponent";
+import MoviesListComponent from "./components/MoviesListComponent/MoviesListComponent";
+import {FC} from "react";
+import { getAllMovies } from "./services/movies/getAllMovies";
 
-export default function StartedPage() {
+interface IProps {
+    searchParams: {
+        page: number
+    }
+}
+
+const HomePage: FC<IProps> = async function HomePage({searchParams}) {
+
+    const page = +searchParams.page || 1;
+    const {results, total_pages} = await getAllMovies(page);
+
     return (
         <div className="flex-column">
             <HeaderComponent/>
             <GenresComponent/>
-            <h2 className="padding-5px-10px"> Select preferred genre or Movies in the menu to see all the movies </h2>
+            <MoviesListComponent page={page} totalPages={total_pages} movies={results}/>
         </div>
 
     )
 }
+
+export default HomePage;
