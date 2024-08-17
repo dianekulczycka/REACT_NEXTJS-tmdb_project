@@ -11,4 +11,5 @@ export interface IMovie {
     budget: number;
     revenue: number;
     tagline: string;
+    adult: boolean;
 }

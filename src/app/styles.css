@@ -1,17 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+/* NORMALIZATION */
+
 * {
-    /* NORMALIZATION */
     margin: .1rem;
     padding: .1rem;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    /* FONTS */
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
 }
 
 body {
@@ -19,37 +15,60 @@ body {
     padding: 0;
 }
 
-/* BODY LIGHT/DARK THEMES */
+/* FONTS */
+
+* {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* LIGHT/DARK THEMES */
 
 .body-light {
-    margin: 0;
-    background: #e8e8e8;
+    background: #dadada;
+    color: #292929;
 }
 
 .body-dark {
-    margin: 0;
-    background: #7c7c7c;
+    background: #292929;
+    color: #dadada;
 }
 
 /* WIDTH */
 
-.w100perc {
+.width-100-perc {
     width: 100%;
 }
 
-.w80perc {
-    width: 80%;
-}
-
-.w50vw {
+.width-50-vw {
     width: 50vw;
 }
 
-/* MARGIN AUTO */
+/* MARGINS PADDINGS */
 
 .margin-auto {
     margin: auto;
 }
+
+.margin-0 {
+    margin: 0;
+}
+
+.side-mar-1em {
+    margin: 0 2em;
+}
+
+.padding-0 {
+    padding: 0;
+}
+
+
+.padding-5px-10px {
+    padding: 5px 10px;
+}
+
 
 /* FLEXES */
 
@@ -68,14 +87,14 @@ body {
 
 /* GRIDS */
 
-.grid-2cols {
+.grid-2-columns {
     display: grid;
     justify-content: space-evenly;
     align-items: center;
     grid-template-columns: repeat(3, 30vw);
 }
 
-.grid-5cols {
+.grid-5-columns {
     display: grid;
     grid-auto-flow: row;
     grid-template-columns: repeat(10, 1fr);
@@ -89,9 +108,8 @@ body {
 }
 
 /* TEXT */
-
-h1, h2, h3, h4, h5, h6, p, a, button, span {
-    color: black;
+a, button {
+    color: red;
 }
 
 h3 {
@@ -102,21 +120,31 @@ h3 {
     text-align: center;
 }
 
-/* CUSTOM COLOR THEME */
+/* CURSOR */
 
-.border-darkred {
-    border: 1px darkred solid;
+.cursor-pointer {
+    cursor: pointer;
 }
 
+/* CUSTOM COLOR THEME */
 
-.link-hover-darkred:hover {
+.border-red {
+    border: 1px red solid;
+}
+
+.bg-red {
+    background-color: red;
     color: white;
-    background: darkred;
+}
+
+.bg-red-hover:hover {
+    color: white;
+    background: #da0000;
     transition: 300ms ease-in-out;
 }
 
-.activeMenuLink {
-    color: darkred;
+.active-menu-link {
+    color: red;
 }
 
 /* CUSTOM BADGE STYLING */

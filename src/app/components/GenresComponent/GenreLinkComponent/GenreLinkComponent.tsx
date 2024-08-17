@@ -1,7 +1,6 @@
 import React, {FC} from 'react';
 import Link from "next/link";
 import {IGenre} from "@/app/interfaces/IGenre";
-import {IMovie} from "@/app/interfaces/IMovie";
 
 interface IProps {
     genre: IGenre;
@@ -9,10 +8,10 @@ interface IProps {
 
 const GenreLinkComponent: FC<IProps> = ({genre}) => {
     return (
-        <li className="flex-row border-darkred link-hover-darkred">
+        <li className="flex-row border-red bg-red-hover padding-0">
             <Link
                 href={`/genres/${genre.id}`}
-                className="w100perc link-hover-darkred text-centered">
+                className="width-100-perc bg-red-hover text-centered margin-0 padding-5px-10px">
                 {genre.name}
             </Link>
         </li>

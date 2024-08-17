@@ -11,7 +11,7 @@ interface IProps {
 const ClientNavLinkComponent: FC<IProps> = ({children, to}) => {
     let pathname: string = usePathname();
     return (
-        <Link href={to} className={pathname === to ? "activeMenuLink" : ""}>
+        <Link href={to} className={pathname === to ? "active-menu-link" : ""}>
             {children}
         </Link>
     );

@@ -1,6 +1,6 @@
 "use client";
 
-import React, {FC} from 'react';
+import React, {FC, useEffect} from 'react';
 import {Provider} from "react-redux";
 import {useAppSelector} from "@/app/store/helpers/useAppSelector";
 import {useAppDispatch} from "@/app/store/helpers/useAppDispatch";
@@ -10,11 +10,18 @@ const DarkThemeToggleBtn: FC = () => {
     const isDarkThemeEnabled: boolean = useAppSelector(state => state.themeTogglerSliceState.isDarkThemeEnabled);
     const dispatch = useAppDispatch();
 
+    useEffect(() => {
+        document.body.className = isDarkThemeEnabled ? "body-dark" : "body-light";
+    }, [isDarkThemeEnabled]);
+
     return (
         <Provider store={store}>
-            <button onClick={() => {
-                dispatch(actions.toggleTheme())
-            }}> Change to: {isDarkThemeEnabled ? "light" : "dark"}
+            <button
+                id="themeToggler"
+                className="border-red bg-red padding-5px-10px side-mar-1em cursor-pointer"
+                onClick={() => {
+                    dispatch(actions.toggleTheme())
+                }}> change to {isDarkThemeEnabled ? "light" : "dark"} theme
             </button>
         </Provider>
     );

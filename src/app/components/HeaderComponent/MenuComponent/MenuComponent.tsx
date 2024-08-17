@@ -3,7 +3,7 @@ import MenuItemComponent from "@/app/components/HeaderComponent/MenuComponent/Me
 
 const MenuComponent = () => {
     return (
-        <div>
+        <div className="side-mar-1em">
             <ul className="flex-row clean-li clean-text">
                 <MenuItemComponent target={"movies"}/>
                 <MenuItemComponent target={"search"}/>

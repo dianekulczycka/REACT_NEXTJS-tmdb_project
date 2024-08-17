@@ -11,7 +11,7 @@ interface IProps {
 const MovieListCardComponent: FC<IProps> = ({movie}) => {
     return (
         <div className="flex-column">
-            <PosterComponent posterPath={movie.poster_path} />
+            <PosterComponent posterPath={movie.poster_path}/>
             <h3>{movie.title}</h3>
             <StarsRatingComponent rating={movie.vote_average}/>
         </div>

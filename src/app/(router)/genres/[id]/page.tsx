@@ -7,18 +7,22 @@ import {getMoviesByGenre} from "@/app/services/movies/getMoviesByGenre";
 interface IProps {
     params: {
         id: number
+    },
+    searchParams: {
+        page: number
     }
 }
 
-const SelectedMoviesPage: FC<IProps> = async ({params: {id}}) => {
+const SelectedMoviesPage: FC<IProps> = async ({params: {id}, searchParams}) => {
 
-    let selectedMovies = await getMoviesByGenre(id);
+    const page = +searchParams.page || 1;
+    const {results, total_pages} = await getMoviesByGenre(id, page);
 
     return (
         <div className="flex-column">
             <HeaderComponent/>
             <GenresComponent/>
-            <MoviesListComponent movies={selectedMovies}/>
+            <MoviesListComponent page={page} totalPages={total_pages} movies={results}/>
         </div>
     );
 };

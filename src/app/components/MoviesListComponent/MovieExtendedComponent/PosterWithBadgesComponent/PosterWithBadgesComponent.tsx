@@ -1,14 +1,12 @@
 import React, {FC} from 'react';
 import {IGenre} from "@/app/interfaces/IGenre";
 import PosterComponent from "@/app/components/MoviesListComponent/MovieCardComponent/PosterComponent/PosterComponent";
-import GenreBadgeComponent
-    from "@/app/components/MoviesListComponent/MovieExtendedComponent/PosterWithBadgesComponent/GenreBadgesComponent/GenreBadgeComponent/GenreBadgeComponent";
 import GenreBadgesComponent
     from "@/app/components/MoviesListComponent/MovieExtendedComponent/PosterWithBadgesComponent/GenreBadgesComponent/GenreBadgesComponent";
 
 interface IProps {
     genres: IGenre[],
-    posterPath: string
+    posterPath: string,
 }
 
 const PosterWithBadgesComponent: FC<IProps> = ({genres, posterPath}) => {

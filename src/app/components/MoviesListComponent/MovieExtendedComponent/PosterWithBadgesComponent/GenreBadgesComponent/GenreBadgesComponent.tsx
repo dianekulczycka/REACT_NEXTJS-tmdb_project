@@ -7,7 +7,7 @@ interface IProps {
     genres: IGenre[]
 }
 
-const GenreBadgesComponent:FC<IProps> = ({genres}) => {
+const GenreBadgesComponent: FC<IProps> = ({genres}) => {
     return (
         <div className="badges">
             {

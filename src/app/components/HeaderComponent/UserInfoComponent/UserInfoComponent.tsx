@@ -5,7 +5,7 @@ import userIcon from "@/app/components/HeaderComponent/UserInfoComponent/pics/us
 const UserInfoComponent = () => {
     const username: string = "user";
     return (
-        <div className="flex-row">
+        <div className="flex-row  side-mar-1em">
             <Image
                 src={userIcon}
                 alt="user icon"

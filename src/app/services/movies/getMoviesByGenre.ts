@@ -1,15 +1,14 @@
 import {headerWithToken} from "../helpers/auth-header";
-import {IMovie} from "@/app/interfaces/IMovie";
+import {IPaginatedMovies} from "@/app/interfaces/IPaginatedMovies";
 
-export const getMoviesByGenre = async (id: number): Promise<IMovie[] | []> => {
-    return await fetch(`https://api.themoviedb.org/3/discover/movie?with_genres=${id}`, {
+export const getMoviesByGenre = async (id: number, page: number): Promise<IPaginatedMovies> => {
+    return await fetch(`https://api.themoviedb.org/3/discover/movie?with_genres=${id}&page=${page}`, {
         method: "GET",
         headers: headerWithToken,
         next: {
-            revalidate: 60 * 60 * 4 // 4hrs
+            revalidate: 60 * 60 * 24 // 24hrs
         }
     })
-        .then(value => value.json())
-        .then(value => value.results);
-}
+        .then(response => response.json());
+};
 
