@@ -11,7 +11,7 @@ interface IProps {
 
 const PosterWithBadgesComponent: FC<IProps> = ({genres, posterPath}) => {
     return (
-        <div className="badges-container">
+        <div className="badges-container cursor-pointer">
             <GenreBadgesComponent genres={genres}/>
             <PosterComponent posterPath={posterPath}/>
         </div>

@@ -11,7 +11,7 @@ const GenreBadgesComponent: FC<IProps> = ({genres}) => {
     return (
         <div className="badges">
             {
-                genres.map(({id, name}) => <GenreBadgeComponent key={id} genreName={name}/>)
+                genres.map(genre => <GenreBadgeComponent key={genre.id} genre={genre}/>)
             }
         </div>
     );

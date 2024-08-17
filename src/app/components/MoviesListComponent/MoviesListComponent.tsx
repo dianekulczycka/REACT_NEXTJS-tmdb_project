@@ -16,7 +16,7 @@ const MovieListComponent: FC<IProps> = async ({movies, page, totalPages}) => {
     return (
         <div>
             <PaginationComponent totalPages={totalPages} page={page}/>
-            <div className="grid-2-columns">
+            <div className="grid-3-columns">
                 {
                     movies.map(movie =>
                         <Link

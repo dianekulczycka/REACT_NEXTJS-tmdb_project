@@ -11,7 +11,7 @@ interface IProps {
 
 const MovieExtendedComponent: FC<IProps> = ({movie}) => {
     return (
-        <div className="grid-2-columns margin-auto">
+        <div className="grid-3-columns margin-auto">
             <div className="flex-column">
                 <PosterWithBadgesComponent genres={movie.genres} posterPath={movie.poster_path}/>
             </div>

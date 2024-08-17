@@ -5,9 +5,10 @@ import {useForm} from "react-hook-form";
 import {searchKeywords} from "../../services/movies/searchKeywords";
 import {IQuerySearchResult} from "../../interfaces/IQuerySearchResult";
 import {IFormType} from "../../interfaces/IForm";
+import SearchResultComponent from './SearchResultComponent';
 
 const SearchFormComponent = () => {
-    const [querySearchResults, setQuerySearchResults] = useState<IQuerySearchResult[] | null>(null);
+    const [querySearchResults, setQuerySearchResults] = useState<IQuerySearchResult[]>([]);
     let {register, handleSubmit} = useForm<IFormType>();
 
     let formSubmitHandler = async (data: IFormType) => {
@@ -22,10 +23,7 @@ const SearchFormComponent = () => {
                 <input required={true} type="text" placeholder="E.g. 'Spider'" {...register("query")}/>
                 <button>search</button>
             </form>
-            {querySearchResults ? <h2> Results: </h2> : ""}
-            {
-                querySearchResults?.map(({id, name}) => <h3 key={id}> {id}. {name} </h3>)
-            }
+            <SearchResultComponent querySearchResults={querySearchResults}/>
         </div>
     );
 };

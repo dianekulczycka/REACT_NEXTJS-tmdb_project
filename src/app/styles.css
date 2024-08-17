@@ -27,13 +27,13 @@ body {
 /* LIGHT/DARK THEMES */
 
 .body-light {
-    background: #dadada;
+    background: white;
     color: #292929;
 }
 
 .body-dark {
     background: #292929;
-    color: #dadada;
+    color: white;
 }
 
 /* WIDTH */
@@ -45,6 +45,7 @@ body {
 .width-50-vw {
     width: 50vw;
 }
+
 
 /* MARGINS PADDINGS */
 
@@ -87,7 +88,7 @@ body {
 
 /* GRIDS */
 
-.grid-2-columns {
+.grid-3-columns {
     display: grid;
     justify-content: space-evenly;
     align-items: center;
@@ -144,7 +145,7 @@ h3 {
 }
 
 .active-menu-link {
-    color: red;
+    font-weight: bold;
 }
 
 /* CUSTOM BADGE STYLING */
@@ -164,8 +165,6 @@ h3 {
 
 .badge {
     padding: 10px;
-    opacity: .9;
-    background: red;
-    color: white;
+    background: #b1b1b1;
     border-radius: 10%;
 }
